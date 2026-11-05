@@ -6,8 +6,9 @@ subtitle: AI Researcher & Software Developer
 
 profile:
   align: right
-  initials: TK
-  label: Tehreem Kamal
+  image: profile.jpg
+  image_circular: true
+  image_alt: Tehreem Kamal
 
 selected_papers: false
 social: true

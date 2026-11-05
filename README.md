@@ -12,7 +12,7 @@ Academic and software development portfolio, built with the [al-folio](https://g
 - `_data/socials.yml`: email, GitHub, LinkedIn, and CV links.
 - `files/CV.pdf`: downloadable CV.
 
-All biographical content comes from the supplied CV. No publications are listed. The homepage uses a TK monogram; to add a personal photograph, put it in `assets/img/`, set `profile.image` and `profile.image_circular` in `_pages/about.md`, and remove `profile.initials` and `profile.label`.
+All biographical content comes from the supplied CV. No publications are listed. The homepage uses the supplied portrait at `assets/img/profile.jpg`, displayed as a circular head-and-shoulders crop using CSS. The original photograph is preserved unchanged. To replace it, update `profile.image` and `profile.image_alt` in `_pages/about.md`; adjust the crop in `.profile-photo-frame` in `assets/css/main.scss`.
 
 ## Local development
 
