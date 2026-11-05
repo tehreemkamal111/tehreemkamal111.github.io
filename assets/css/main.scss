@@ -1,0 +1,110 @@
+---
+---
+@charset "utf-8";
+
+@use "sass:math";
+@use "sass:string";
+
+@use "variables" with (
+  $max-content-width: {{ site.max_width | default: "930px" }}
+);
+
+@use "themes";
+@use "layout";
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+@use "tabs";
+@use "teachings";
+@use "typograms";
+
+/* Portfolio accent colors; retain the theme's typography and layout. */
+:root {
+  --global-theme-color: #00369f;
+  --global-hover-color: #00369f;
+}
+
+html[data-theme="dark"] {
+  --global-text-color-light: #e8e8e8;
+  --global-theme-color: #68d36c;
+  --global-hover-color: #68d36c;
+}
+
+.site-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.15rem 0 1.25rem;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  color: var(--global-text-color-light);
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.site-updated time {
+  color: var(--global-theme-color);
+  font-weight: 500;
+}
+
+.projects h2.category {
+  color: var(--global-text-color);
+}
+
+.projects .card-title,
+.projects .card-text {
+  overflow-wrap: anywhere;
+}
+
+.profile-monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1;
+  margin: 0 auto 1.5rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 50%;
+  background-color: var(--global-code-bg-color, var(--global-bg-color));
+  color: var(--global-theme-color);
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+}
+
+.portfolio-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+a.portfolio-button {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--global-theme-color);
+  border-radius: 0.25rem;
+  background-color: var(--global-theme-color);
+  color: var(--global-bg-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a.portfolio-button:hover {
+  background-color: var(--global-hover-color);
+  color: var(--global-bg-color);
+  text-decoration: none;
+}
+
+.portfolio-actions a:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 4px;
+}
